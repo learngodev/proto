@@ -104,4 +104,6 @@ message ConversationStreamResponse {
 
 service ConversationService {
   rpc Stream (stream ConversationStreamRequest) returns (stream ConversationStreamResponse);
+  rpc Subscribe (JoinConversation) returns (stream ConversationStreamResponse);
+  rpc SubscribeInbox (JoinConversation) returns (stream ConversationStreamResponse);
 }
